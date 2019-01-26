@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Survey Form</title>
+</head>
+<style>
+body {
+    background-color: #6bf5d9;
+    width: auto;
+    height: auto;
+    padding-top: auto;
+    padding-right: 15%;
+    padding-left: 15%;
+    border-radius: 5px;
+}
+h1{
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 300%;
+    padding: 0%;
+    margin: 0%;
+    color:#022031;
+}
+p{
+  color:#022031;
+  font-size: 100%;  
+}
+.sub-window{
+    
+    display:block;
+    width: 85%;
+    height: 85%;
+    background-color:#5B6EA8; 
+    border-radius: 5px;
+    padding: 7%;
+}
+.text{
+    text-align: center;
+    font-size: 200%;
+    margin: 0%;
+    padding: 0%;
+    color:#022031;
+
+}
+.text2{
+    text-align: center;
+    margin: 0%;
+    padding: 0%;
+    color:#022031;
+
+}
+label{
+display: inline-block;
+text-align: left;
+}
+form{
+        display: inline-block;
+        text-align: right;
+        padding-right: 25%;
+        color: #022031;
+        font-style: bold;
+
+    }
+.input, .list, .textarea{
+  position: relative;
+  margin-left: 20px;
+  display: block;
+  float: right;
+  border:solid 1px #47A8BD;
+  background-color: #47A8BD;
+  border-radius: 5px;
+  color:#022031;
+  width: 200px;
+  height: 30px;
+}
+.radio, .checkbox{
+  position: relative;
+  margin-left: 20px;
+  display: block;
+  float: right;
+  border:solid 1px #47A8BD;
+  background-color: #47A8BD;
+  border-radius: 5px;
+  color:#022031;
+}
+button{
+position:relative;
+float:center;
+margin-right: 100px;
+border:solid 1px #47A8BD;
+background-color: #47A8BD;
+border-radius: 5px;
+width: 120px;
+height: 50px;
+color:white;
+font-style: bold;
+font-size: 25px;
+padding: 5px;
+vertical-align: middle;
+}
+div{
+    vertical-align: middle;
+    display: inline-block;
+}
+textarea{
+  position: relative;
+  margin-left: 20px;
+  display: block;
+  float: right;
+  border:solid 1px #47A8BD;
+  background-color: #47A8BD;
+  border-radius: 5px;
+  color:#022031;
+  width: 80%;
+  height: 80%;
+
+}
+</style>
+<body>
+        <h1>Survey Form</h1>
+        <div class="sub-window">
+        <p class="text">Let us know how we can improve freeCodeCamp</p> <br>
+        <form action="_blank" method="POST">
+         * Name:<input class="input" type="text" name="name" value="Enter Your Name"><br><br>
+         * E-Mail:<input class="input" type="text" name="E-Mail" value="Enter Your E-Mail"><br><br>
+         * Age:<input class="input" type="text" name="Age" value="Enter Your Age"><br><br><br>
+            <div>Which option best describes your current role? 
+            <input class="input" list="role-options" placeholder="Choose an option"> <!--make a list of name role-options then make a datalist tag of id=role-options-->
+            <datalist id="role-options"> <!--below i gonna use select tag and option tag-->
+              <option value="Student">
+              <option value="Full time job">
+              <option value="Full time learner">
+              <option value="Prefer not to say">
+              <option value="Other">
+            </datalist>
+        </div> <br><br>
+         <p>* How likely is that you would recommend<br>
+              freeCodeCamp to a friend?<br><br></p>
+                    <input class="radio" type="radio" name="Definitely" value="Definitely" checked>Definitely <br>
+                    <input class="radio" type="radio" name="Definitely" value="Maybe" >Maybe <br>
+                    <input class="radio" type="radio" name="Definitely" value="Not Sure" >Not Sure <br>
+         <br><br>
+        <div>What do you like in most FFC?
+                  <select class=list name="cars">
+                    <option value="select" selected disabled>Select an Option</option> 
+                    <option value="Chalenges">Chalenges</option>
+                    <option value="Projects">Projects</option>
+                    <option value="Community">Community</option>
+                    <option value="Open Sourse">Open Sourse</option>
+                  </select>
+        </div><br><br>
+        <div>Things that should be improved in the future <br>(Check all that apply): <br><br>
+            <span>
+                <input class="checkbox" type="checkbox" name="Front-end Projects" value="Front-end Projects"> Front-end Projects<br>
+                <input class="checkbox" type="checkbox" name="Back-end Projects" value="Back-end Projects"> Back-end Projects<br>
+                <input class="checkbox" type="checkbox" name="Data Visualization" value="Data Visualization"> Data Visualization<br>
+                <input class="checkbox" type="checkbox" name="Chalenges" value="Chalenges"> Chalenges<br>
+                <input class="checkbox" type="checkbox" name="Open Source Community" value="Open Source Community"> Open Source Community<br>
+                <input class="checkbox" type="checkbox" name="Gitter help rooms" value="Gitter help rooms"> Gitter help rooms<br>
+                <input class="checkbox" type="checkbox" name="Videos" value="Videos"> Videos<br>
+                <input class="checkbox" type="checkbox" name="City Meetups" value="City Meetups"> City Meetups<br>
+                <input class="checkbox" type="checkbox" name="Wiki" value="Wiki"> Wiki<br>
+                <input class="checkbox" type="checkbox" name="Forum" value="Forum"> Forum<br>
+                <input class="checkbox" type="checkbox" name="Additional Courses" value="Additional Courses"> Additional Courses<br><br>
+            </span>
+        </div>
+        <p class="text2">Any Comments or Suggestions?</p><br>
+        <textarea name="text-area" id="" cols="30" rows="10" placeholder="Enter your comments here"></textarea><br><br><br><br><br><br><br><br><br><br>
+
+          <button>Submit</button>  
+
+        </form>
+        </div>
+
+
+
+
+
+</body>
+</html>
